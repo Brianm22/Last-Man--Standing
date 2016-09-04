@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 04, 2016 at 03:59 PM
+-- Generation Time: Sep 04, 2016 at 11:55 PM
 -- Server version: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -174,17 +174,20 @@ INSERT INTO `teamtest` (`id`, `tablePosition`, `teamName`, `overallPlayed`, `ove
 
 CREATE TABLE IF NOT EXISTS `user` (
   `UserID` int(11) NOT NULL,
-  `UserNmae` varchar(20) NOT NULL,
+  `Username` varchar(20) NOT NULL,
   `Pass` varchar(20) NOT NULL,
-  `email` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  `email` varchar(78) NOT NULL,
+  `Firstname` varchar(50) NOT NULL,
+  `Lastname` varchar(50) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`UserID`, `UserNmae`, `Pass`, `email`) VALUES
-(1, 'Brianm22', 'password', 0);
+INSERT INTO `user` (`UserID`, `Username`, `Pass`, `email`, `Firstname`, `Lastname`) VALUES
+(1, 'Brianm22', 'password', '0', 'Brian', 'Muir'),
+(2, 'brian', 'password', 'b@mail.com', 'brian', 'muir');
 
 -- --------------------------------------------------------
 
@@ -256,7 +259,7 @@ ALTER TABLE `team`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `userleague`
 --
