@@ -8,6 +8,21 @@
       <input type="text" ng-model="yourName" placeholder="Enter a name here">
       <hr>
       <h1>Hello {{yourName}}!</h1>
-    </div>
+	  <?php
+$username="brian";$password="password";$database="LMS";
+
+mysql_connect(localhost,$username,$password);
+
+@mysql_select_db($database) or die( "Unable to select database");
+
+$query = SELECT * FROM `user`;
+
+echo = "" + mysql_query($query);
+
+mysql_close();
+?>
+
+
+  </div>
   </body>
 </html>
